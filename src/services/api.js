@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://192.168.0.107:3001';
+const API_BASE_URL = 'https://mock-api-1-4nsz.onrender.com';
 
 export const checkEmailExists = async (email) => {
     const response = await axios.get(`${API_BASE_URL}/users`, {

@@ -1,28 +1,27 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+import AppNavigator from './src/navigation/AppNavigator'
+import { Provider } from 'react-redux'
+import store from './src/redux/store'
+import { loadUser } from './src/redux/userSlice'
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
-
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
-
+const App = () => {
+  useEffect(() => {
+    store.dispatch(loadUser()); // Load stored user on app start
+  }, []);
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
-  );
+    <SafeAreaView style={styles.fullscreen}>
+      <Provider store={store}>
+        <AppNavigator />
+      </Provider>
+    </SafeAreaView>
+  )
 }
 
+export default App
+
 const styles = StyleSheet.create({
-  container: {
+  fullscreen: {
     flex: 1,
   },
-});
-
-export default App;
+})

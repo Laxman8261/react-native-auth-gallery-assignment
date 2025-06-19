@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "b7cd",
+      "name": "Laxman",
+      "email": "laxman@gmail.com",
+      "dob": "10-07-2005",
+      "password": "123456"
+    },
+    {
+      "id": "8a8c",
+      "name": "Laxman2",
+      "email": "laxman2@gmail.com",
+      "dob": "2025-06-03",
+      "password": "123456"
+    },
+    {
+      "id": "4734",
+      "name": "ankit kumar",
+      "email": "ankit@gmail.com",
+      "dob": "2025-06-01",
+      "password": "123456"
+    },
+    {
+      "id": "46a2",
+      "name": "priya ",
+      "email": "priya@gmail.com",
+      "dob": "2000-06-02",
+      "password": "123456"
+    },
+    {
+      "id": "5430",
+      "name": "Rani ",
+      "email": "rani@gmail.com",
+      "dob": "2007-10-04",
+      "password": "123456"
+    }
+  ]
+}
